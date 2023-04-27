@@ -1,18 +1,16 @@
 public class Zapping {
 
-    public int canal(int canalInicio, int canalFin){
-        if (canalInicio == 0 && canalFin == 0){
+    public int canal(int canalInicio, int canalFin) {
+        int total = 99;
+        if (canalInicio == canalFin) {
             return 0;
-        }
-        if (canalInicio == 2 && canalFin == 99){
-            return 2;
-        }
-        if (canalInicio == 5 && canalFin == 63){
-            return 41;
-        }
-        if (canalInicio == 63 && canalFin == 5){
-            return 41;
+        } else if (canalInicio > canalFin) {
+            return (total - canalInicio) + canalFin;
+        } else if ((canalFin-canalInicio)>((total-canalFin)+canalInicio)) {
+            return (total-canalFin)+canalInicio;
         }
         return canalFin-canalInicio;
     }
-}
+
+    }
+
