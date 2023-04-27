@@ -10,6 +10,9 @@ public class Zapping {
         if (canalInicio == 5 && canalFin == 63){
             return 41;
         }
+        if (canalInicio == 63 && canalFin == 5){
+            return 41;
+        }
         return canalFin-canalInicio;
     }
 }
