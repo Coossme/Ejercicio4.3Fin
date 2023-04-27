@@ -16,4 +16,12 @@ class ZappingTest {
         System.out.println(resultado);
         assertEquals(1, resultado);
     }
+
+    @org.junit.jupiter.api.Test
+    void canalOrigenDiezDestinoTreinta() {
+        Zapping zapping = new Zapping();
+        int resultado = zapping.canal(10, 30);
+        System.out.println(resultado);
+        assertEquals(20, resultado);
+    }
 }
